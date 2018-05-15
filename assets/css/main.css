@@ -2918,7 +2918,7 @@
 					display: block;
 					padding: 0;
 				}
-		#header ul li a {
+		#header  nav ul li a {
 						display: block;
 						position: relative;
 						height: 3em;
@@ -2942,12 +2942,37 @@
 				text-decoration:none;
 				text-transformation: uppercase;
 				float:left;
-				padding: 0.25em 1.5em;
-				margin-left: 1.5em;
+				padding: 0em;
+				
 				font-size: 1em;
 				text-transform: uppercase;
 				}
-
+		label{
+			display: none;
+			float: right;
+			}
+		#toggle{
+			display: none;
+			}
+		@media only screen and (max-width: 936px){
+			label{
+				display:block;
+				cursor: pointer;
+				}
+			#header nav ul li{
+				display: none;
+					}
+			#header nav ul li a {
+				display: inline;
+				width: 100%;
+				margin:0;
+				border-bottom: 1px solid black;
+				}
+			#toggle:checked + #header{
+						background: black;
+						}
+					
+						}
 
 /* Menu */
 
@@ -2975,11 +3000,12 @@
 		max-width: 80%;
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
-		background: #585858;
+		background: lightgray;
 		color: #ffffff;
 		cursor: default;
 		visibility: hidden;
 		z-index: 10002;
+		
 	}
 
 		#menu > .inner {
@@ -2996,25 +3022,30 @@
 			padding: 2.75em;
 			opacity: 0;
 			overflow-y: auto;
+			list-style-type: none;
+			font-size:1.15em;
+			text-align: left;
+			
+			
 		}
 
 			#menu > .inner > ul {
 				list-style: none;
 				margin: 0 0 1em 0;
 				padding: 0;
+				
 			}
 
 				#menu > .inner > ul > li {
 					padding: 0;
-					border-top: solid 1px rgba(255, 255, 255, 0.15);
+					border-top: solid 0.5px #585858;
+					
 				}
 
 					#menu > .inner > ul > li a {
 						display: block;
-						padding: 1em 0;
-						line-height: 1.5;
-						border: 0;
-						color: inherit;
+						padding: 1.5em 0;
+						
 					}
 
 					#menu > .inner > ul > li:first-child {
